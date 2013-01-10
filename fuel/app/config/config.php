@@ -35,5 +35,8 @@ return array(
 		'packages'  => array(
 			'orm',
 		),
-	)
+	),
+	'module_paths' => array(
+		APPPATH.'modules'.DS
+	),
 );

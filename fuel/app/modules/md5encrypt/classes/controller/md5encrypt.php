@@ -11,7 +11,7 @@
 
 namespace Md5encrypt;
 
-class Controller_Md5encrypt extends Controller_Template
+class Controller_Md5encrypt extends \Controller_Template
 { 
 
 	/**
@@ -25,6 +25,6 @@ class Controller_Md5encrypt extends Controller_Template
 		$data = array();
 		$this->template->tab = 'geek';
 		$this->template->title = 'MD5 Encrypt Tool';
-        $this->template->content = View::forge('welcome/index', $data);		
+        $this->template->content = \View::forge('index', $data);		
 	}
 }
