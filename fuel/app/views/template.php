@@ -7,7 +7,8 @@
 	
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<?php echo Asset::css('bootstrap.min.css'); ?>
-	<?php echo Asset::js('bootstrap.min.js'); ?>
+  <?php echo Asset::js('bootstrap.min.js'); ?>
+  <?php echo Asset::css('styles.css'); ?>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,7 +23,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Tool Turtle</a>
+          <a class="brand" href="#">
+            <div class="img"><?php echo Asset::img('turtletool.png'); ?></div>
+            <span class="text">Tool Turtle</span>
+          </a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
