@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?php echo Uri::create(); ?>">
+          <a class="brand" href="<?php echo Uri::create('/'); ?>">
             <div class="img"><?php echo Asset::img('turtletool.png'); ?></div>
             <span class="text">Tool Turtle</span>
           </a>
