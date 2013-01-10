@@ -9,9 +9,9 @@
  * @extends  Controller
  */
 
-namespace Md5_encrypt;
+namespace Md5encrypt;
 
-class Controller_Md5_Encrypt extends Controller_Template
+class Controller_Md5encrypt extends Controller_Template
 { 
 
 	/**
