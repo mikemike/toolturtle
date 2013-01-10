@@ -1,5 +1,12 @@
 
-<h2>Get Started</h2>
-<p>The controller generating this page is found at <code>APPPATH/classes/controller/welcome.php</code>.</p>
-<p>This view can be found at <code>APPPATH/views/welcome/index.php</code>.</p>
-<p>You can modify these files to get your application started quickly.</p>
+<div class="hero-unit">
+	<h1>Hello!</h1>
+	<p class="lead">
+		<strong>Tool Turtle</strong> is a place where you can find lots of
+		useful <strong>online tools</strong> to help you quickly.
+	</p>
+	<p>
+		From fun <strong>birthday calculators</strong> to geeky <strong>MD5 
+		encryption tools</strong>, you can find it all here.
+	</p>
+</div> <!-- .hero-unit -->

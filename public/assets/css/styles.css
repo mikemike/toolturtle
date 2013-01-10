@@ -1,3 +1,5 @@
+body{ padding-top:65px; }
+
 .brand{ position:relative; }
 .brand .img{ position:absolute; top:3px; }
 .brand .text{ padding-left:45px !important; }
