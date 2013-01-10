@@ -12,7 +12,7 @@
 namespace Md5_encrypt;
 
 class Controller_Md5_Encrypt extends Controller_Template
-{
+{ 
 
 	/**
 	 * The tool
