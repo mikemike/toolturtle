@@ -5,4 +5,5 @@ return array(
 	
 	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
 	'tools/geek/md5-encrypt' => 'md5encrypt',
+	'tools/geek/sha1-encrypt' => 'sha1encrypt',
 );

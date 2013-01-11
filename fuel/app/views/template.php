@@ -34,6 +34,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Geek <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo Uri::create('tools/geek/md5-encrypt'); ?>">MD5 Encrypt</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/sha1-encrypt'); ?>">SHA1 Encrypt</a></li>
                 </ul>
               </li>
             </ul>
