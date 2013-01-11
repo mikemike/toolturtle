@@ -39,4 +39,32 @@ return array(
 	'module_paths' => array(
 		APPPATH.'modules'.DS
 	),
+	
+	/**
+	 * Security settings
+	 */
+	'security' => array(		
+
+		/**
+		 * With output encoding switched on all objects passed will be converted to strings or
+		 * throw exceptions unless they are instances of the classes in this array.
+		 */
+		'whitelisted_classes' => array(
+			'Fuel\\Core\\Response',
+			'Fuel\\Core\\View',
+			'Fuel\\Core\\ViewModel',
+			'Fuel\\Core\\Validation',
+			'Closure',
+		)
+	),
+	
+	/**
+	 * Validation rules
+	 */
+	'validation' => array(
+		'open_list' => '<div class="alert alert-error">',
+		'close_list' => '</div>',
+		'open_error' => '',
+		'close_error' => '<br>',
+	),
 );
