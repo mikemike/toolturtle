@@ -5,10 +5,19 @@
 	<title><?= $title ?> | Tool Turtle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+    <?php if(!empty($description)): ?><meta name="description" content="<?=$description?>"><?php endif; ?>
+    
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<?php echo Asset::css('bootstrap.min.css'); ?>
-  <?php echo Asset::js('bootstrap.min.js'); ?>
-  <?php echo Asset::css('styles.css'); ?>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+	<?php echo Asset::css('bootstrap-responsive.min.css'); ?>
+    <?php echo Asset::js('bootstrap.min.js'); ?>
+    <?php echo Asset::css('styles.css'); ?>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

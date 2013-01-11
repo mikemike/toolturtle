@@ -42,6 +42,7 @@ class Controller_Sha1encrypt extends \Controller_Template
 		
 		$this->template->tab = 'geek';
 		$this->template->title = 'SHA1 Encrypt Tool';
+		$this->template->description = 'SHA1 Encrypt online tool';
         $this->template->content = \View::forge('index', $data);		
 	}
 }
