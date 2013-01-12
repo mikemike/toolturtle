@@ -1,7 +1,8 @@
 <p>
-	This tool calculates the number of words in the text given.
-	Words are counted based on spaces and irregular characters
-	in a word (for example, hell-no).
+	The HTML entities tool converts some HTML using HTML entities.  
+	For example, using HTML Entities &lt;html&gt; will become
+	&amp;lt;html&amp;gt;.  You can also decode HTML Entities in
+	the same way using the second text box.
 </p>
 
 <?php echo $val->show_errors(); ?>
