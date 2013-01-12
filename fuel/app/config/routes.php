@@ -3,7 +3,9 @@ return array(
 	'_root_'  => 'welcome/index',  // The default route
 	'_404_'   => 'welcome/404',    // The main 404 route
 	
-	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
 	'tools/geek/md5-encrypt' => 'md5encrypt',
 	'tools/geek/sha1-encrypt' => 'sha1encrypt',
+	'tools/geek/strlen' => 'strlen',
+	'tools/geek/word-count' => 'wordcount',
+	'tools/geek/html-entities' => 'htmlentities',
 );

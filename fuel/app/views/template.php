@@ -58,6 +58,8 @@
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo Uri::create('tools/geek/md5-encrypt'); ?>">MD5 Encrypt</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/sha1-encrypt'); ?>">SHA1 Encrypt</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/strlen'); ?>">Strlen / String Length</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/word-count'); ?>">Word Count</a></li>
                 </ul>
               </li>
             </ul>
