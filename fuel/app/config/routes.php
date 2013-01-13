@@ -8,4 +8,6 @@ return array(
 	'tools/geek/strlen' => 'strlen',
 	'tools/geek/word-count' => 'wordcount',
 	'tools/geek/html-entities' => 'htmlentities',
+	'tools/geek/strrev' => 'strrev',
+	'tools/geek/unix-timestamp-convertor' => 'unixtimestamp',
 );

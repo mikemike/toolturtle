@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title><?= $title ?> | Tool Turtle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-    <?php if(!empty($description)): ?><meta name="description" content="<?=$description?>"><?php endif; ?>
-    
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <?php if(!empty($description)): ?><meta name="description" content="<?=$description?>"><?php endif; ?>
+  
+  <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 	<?php echo Asset::css('bootstrap.min.css'); ?>
     <style type="text/css">
       body {
@@ -16,12 +19,16 @@
       }
     </style>
 	<?php echo Asset::css('bootstrap-responsive.min.css'); ?>
-    <?php echo Asset::js('bootstrap.min.js'); ?>
-    <?php echo Asset::css('styles.css'); ?>
+  <?php echo Asset::js('bootstrap.min.js'); ?>
+  <?php echo Asset::js('jquery-ui-timepicker-addon.js'); ?>
+
+  <?php echo Asset::css('styles.css'); ?>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <?php echo (!empty($javascript) ? $javascript : '')?>
     
     <script type="text/javascript">
 
@@ -59,8 +66,10 @@
                   <li><a href="<?php echo Uri::create('tools/geek/md5-encrypt'); ?>">MD5 Encrypt</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/sha1-encrypt'); ?>">SHA1 Encrypt</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/strlen'); ?>">Strlen / String Length</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/strrev'); ?>">Strrev / String Reverse</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/word-count'); ?>">Word Count</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/html-entities'); ?>">HTML Entities</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/unix-timestamp-convertor'); ?>">Unix Timestamp Convertor</a></li>
                 </ul>
               </li>
             </ul>
