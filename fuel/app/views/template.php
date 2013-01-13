@@ -72,6 +72,12 @@
                   <li><a href="<?php echo Uri::create('tools/geek/unix-timestamp-convertor'); ?>">Unix Timestamp Convertor</a></li>
                 </ul>
               </li>
+              <li class="dropdown <?php echo ((!empty($tab) && $tab=='teens') ? ' active' : '') ?>">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teens <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="<?php echo Uri::create('tools/teens/countdown-timer'); ?>">Countdown Timer</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

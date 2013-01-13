@@ -10,4 +10,6 @@ return array(
 	'tools/geek/html-entities' => 'htmlentities',
 	'tools/geek/strrev' => 'strrev',
 	'tools/geek/unix-timestamp-convertor' => 'unixtimestamp',
+
+	'tools/teens/countdown-timer' => 'countdown',
 );
