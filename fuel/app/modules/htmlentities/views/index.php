@@ -1,3 +1,5 @@
+<h1>HTML Entities Conversion Tool</h1>
+
 <p>
 	The HTML entities tool converts some HTML using HTML entities.  
 	For example, using HTML Entities &lt;html&gt; will become

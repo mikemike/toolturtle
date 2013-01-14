@@ -1,3 +1,5 @@
+<h1>MD5 Encrypt Tool</h1>
+
 <p>
 	The MD5 algorithm is a widely used hash function.  It allows you to one-way
     hash a string/value into its MD5 equivalent.

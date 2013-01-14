@@ -1,3 +1,5 @@
+<h1><code>strrev</code> / String Reverse Tool</h1>
+
 <p>
 	Use this tool to reverse a text, sentance or word around.
 	For example, the text 'hello there' would become: ereht olleh.

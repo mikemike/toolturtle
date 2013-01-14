@@ -1,3 +1,5 @@
+<h1><code>strlen</code> / String Length Tool</h1>
+
 <p>
 	This tool calculates the length of a string.  A string is a series
 	of characters, this can be a sentance, word, paragraph, anything

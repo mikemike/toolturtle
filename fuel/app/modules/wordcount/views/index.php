@@ -1,3 +1,5 @@
+<h1>Word Count Tool</h1>
+
 <p>
 	This tool calculates the number of words in the text given.
 	Words are counted based on spaces and irregular characters

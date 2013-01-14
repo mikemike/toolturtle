@@ -1,3 +1,5 @@
+<h1>SHA1 Encrypt Tool</h1>
+
 <p>
 	The SHA1 algorithm is a widely used hash function, created by the United States
     National Security Agency (NSA).  SHA standards for Secure Hash Algorithm.

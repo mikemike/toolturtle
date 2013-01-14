@@ -1,10 +1,12 @@
+<h1>Unix Timestamp Converter</h1>
+
 <p>
 	The Unix Timestamp is the number of seconds since the Unix epoch, which is
-  January 1st 1970 00:00 UTC.
+  	January 1st 1970 00:00 UTC.
 </p>
 <p>
-  To grab a time before the epoch just use a negative number, for example 
-  <code>-86400</code> is one day before the Unix epoch.  Try it!
+  	To grab a time before the epoch just use a negative number, for example 
+  	<code>-86400</code> is one day before the Unix epoch.  Try it!
 </p>
 
 <?php echo $val->show_errors(); ?>

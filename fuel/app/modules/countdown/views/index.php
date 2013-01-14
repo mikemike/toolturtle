@@ -1,3 +1,5 @@
+<h1>Countdown Timer</h1>
+
 <p>
 	Countdown from a specified time.
 </p>
