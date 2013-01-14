@@ -11,10 +11,45 @@
 	          format: 'hh:mm:ss'
 	        });
       	});
+
+
+        $('#goTime').click(function(){
+          $('#finished').hide();
+          $('#counter').html('');
+
+          var currentDate = new Date();
+
+          var dateString = (strpad(currentDate.getDate()) +'-'+ strpad(currentDate.getMonth()+1)+'-'+currentDate.getFullYear()+' '+ $('#starttime').val());
+          alert(dateString);
+          var time1 = new Date(dateString).getTime();
+          var time2 = new Date().getTime();
+         
+          var diff = new Date(time1 - time2);
+
+          alert(diff);
+
+          var hours = diff.getHours();
+          var minutes = diff.getMinutes();
+          var seconds = diff.getMinutes();
+
+          alert(hours + ':' + minutes + ':' + seconds);
+
+          $('#counter').countdown({
+            image: '<?php echo Uri::base(); ?>assets/img/digits.png',
+            startTime: '00:00',
+            timerEnd: function(){ $('#finished').show(); },
+            format: 'hh:mm:ss'
+          });
+        });
+
+        $('.timepicker').timepicker({
+          showSecond: true
+        });
       });
       function strpad(val){ 
-		return (!isNaN(val) && val.toString().length==1)?"0"+val:val; 
-	  }
+		    return (!isNaN(val) && val.toString().length==1)?"0"+val:val; 
+      }
+
     </script>
 
     <style type="text/css">
