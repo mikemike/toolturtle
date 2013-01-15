@@ -77,6 +77,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo Uri::create('tools/teens/countdown-timer'); ?>">Countdown Timer</a></li>
                   <li><a href="<?php echo Uri::create('tools/teens/case-converter'); ?>">Case Converter</a></li>
+                  <li><a href="<?php echo Uri::create('tools/teens/how-old-will-i-be'); ?>">How Old Will I Be In...?</a></li>
                 </ul>
               </li>
             </ul>

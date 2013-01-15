@@ -13,4 +13,5 @@ return array(
 
 	'tools/teens/countdown-timer' => 'countdown',
 	'tools/teens/case-converter' => 'caseconverter',
+	'tools/teens/how-old-will-i-be' => 'howoldwillibe',
 );
