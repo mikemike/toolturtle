@@ -4,6 +4,7 @@
       	$('#go').click(function(){
       		$('#finished').hide();
       		$('#counter').html('');
+			$('#counterCont').show();
       		$('#counter').countdown({
 	          image: '<?php echo Uri::base(); ?>assets/img/digits.png',
 	          startTime: strpad($('#hours').val()) + ':' + strpad($('#minutes').val()) + ':' + strpad($('#seconds').val()),
@@ -29,6 +30,8 @@
 			alert('Please make sure you select a time in the future!');  
 		  } else {
 		  
+			  $('#counterCont').show();
+			  
 			  var diff = time1 - time2;
 			  var totalSec = diff / 1000;
 			  hours = parseInt( totalSec / 3600 ) % 24;
@@ -56,7 +59,7 @@
         });
       });
       function strpad(val){ 
-		    return (!isNaN(val) && val.toString().length==1)?"0"+val:val; 
+		  return (!isNaN(val) && val.toString().length==1)?"0"+val:val; 
       }
 
     </script>

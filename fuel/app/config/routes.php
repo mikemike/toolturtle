@@ -9,7 +9,8 @@ return array(
 	'tools/geek/word-count' => 'wordcount',
 	'tools/geek/html-entities' => 'htmlentities',
 	'tools/geek/strrev' => 'strrev',
-	'tools/geek/unix-timestamp-convertor' => 'unixtimestamp',
+	'tools/geek/unix-timestamp-converter' => 'unixtimestamp',
 
 	'tools/teens/countdown-timer' => 'countdown',
+	'tools/teens/case-converter' => 'caseconverter',
 );
