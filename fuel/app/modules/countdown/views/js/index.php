@@ -19,31 +19,40 @@
 
           var currentDate = new Date();
 
-          var dateString = (strpad(currentDate.getDate()) +'-'+ strpad(currentDate.getMonth()+1)+'-'+currentDate.getFullYear()+' '+ $('#starttime').val());
-          alert(dateString);
-          var time1 = new Date(dateString).getTime();
-          var time2 = new Date().getTime();
+          var dateString = (currentDate.getFullYear() +'-'+ strpad(currentDate.getMonth()+1)+'-'+strpad(currentDate.getDate())+' '+ $('#starttime').val() +':00');
+		  var curDateString = (currentDate.getFullYear() +'-'+ strpad(currentDate.getMonth()+1)+'-'+strpad(currentDate.getDate())+ ' '+ strpad(currentDate.getHours()) +':'+ strpad(currentDate.getMinutes()) +':'+ strpad(currentDate.getSeconds()) );
          
-          var diff = new Date(time1 - time2);
-
-          alert(diff);
-
-          var hours = diff.getHours();
-          var minutes = diff.getMinutes();
-          var seconds = diff.getMinutes();
-
-          alert(hours + ':' + minutes + ':' + seconds);
-
-          $('#counter').countdown({
-            image: '<?php echo Uri::base(); ?>assets/img/digits.png',
-            startTime: '00:00',
-            timerEnd: function(){ $('#finished').show(); },
-            format: 'hh:mm:ss'
-          });
+		  var time1 = new Date(dateString).getTime();
+          var time2 = new Date(curDateString).getTime();
+          
+		  if(time1 < time2){
+			alert('Please make sure you select a time in the future!');  
+		  } else {
+		  
+			  var diff = time1 - time2;
+			  var totalSec = diff / 1000;
+			  hours = parseInt( totalSec / 3600 ) % 24;
+			  minutes = parseInt( totalSec / 60 ) % 60;
+			  seconds = totalSec % 60;
+	
+			  result = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);
+		
+			  $('#counter').countdown({
+				image: '<?php echo Uri::base(); ?>assets/img/digits.png',
+				startTime: result,
+				timerEnd: function(){ $('#finished').show(); },
+				format: 'hh:mm:ss'
+			  });
+			  
+		  }
         });
-
+		
+		
+        dateNow = new Date();
+		
         $('.timepicker').timepicker({
-          showSecond: true
+          showSecond: true,
+		  //minDate: new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDay(), dateNow.getHours(), dateNow.getMinutes()),
         });
       });
       function strpad(val){ 
