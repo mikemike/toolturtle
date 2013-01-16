@@ -14,6 +14,7 @@
 </p>
 
 <?php echo $val->show_errors(); ?>
+<?php if(!empty($error)): ?><div class="alert alert-error"><?= $error ?></div><?php endif; ?>
 
 <?php echo Form::open(array('class' => 'form-horizontal', 'action' => Uri::current().'#results')); ?>
   <div class="control-group">
@@ -25,7 +26,7 @@
   <div class="control-group">
     <label class="control-label" for="inputEmail">How old will I be in...</label>
     <div class="controls">
-      <?php echo Form::input('futuredate', \Input::Post('futuredate'), array('placeholder' => 'Date', 'class' => 'datepicker input-small')); ?>
+      <?php echo Form::input('futuredate', \Input::Post('futuredate'), array('placeholder' => 'Date', 'class' => 'datepicker2 input-small')); ?>
     </div>
   </div>
   <div class="form-actions">
@@ -34,11 +35,10 @@
 <?php echo Form::close(); ?>
 
 <a name="results"></a>
-<?php if(!empty($timestamp)): ?>
+<?php if(!empty($futuredate_timestamp)): ?>
 <div class="well">
-	<h2>Timestamp for <em><?php echo \Input::Post('datetoconvert'); ?></em>:</h2>
-	<div class="code">
-		<?= $timestamp ?>
-	</div>
+	<p>
+    In <?=date('Y', $futuredate_timestamp)?> you will be <strong><?=$interval['y']?></strong> years, <strong><?=$interval['m']?></strong> months and <strong><?=$interval['d']?></strong> days old.
+  </p>
 </div>
 <?php endif; ?>
