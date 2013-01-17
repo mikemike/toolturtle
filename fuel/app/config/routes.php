@@ -10,6 +10,7 @@ return array(
 	'tools/geek/html-entities' => 'htmlentities',
 	'tools/geek/strrev' => 'strrev',
 	'tools/geek/unix-timestamp-converter' => 'unixtimestamp',
+	'tools/geek/maps-lat-lng' => 'mapslatlng',
 
 	'tools/teens/countdown-timer' => 'countdown',
 	'tools/teens/case-converter' => 'caseconverter',
