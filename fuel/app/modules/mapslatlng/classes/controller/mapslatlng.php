@@ -26,6 +26,8 @@ class Controller_Mapslatlng extends \Controller_Template
 		
 		$this->template->tab = 'geek';
 		$this->template->title = 'Maps Lat,Lng Tool. Grab the latitude and longitude of a point on a map';
+		$this->template->bodyattr = 'onload="initialize();"';
+        $this->template->javascript = \View::forge('js/index', $data);		
         $this->template->content = \View::forge('index', $data);		
 	}
 }

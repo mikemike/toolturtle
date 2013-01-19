@@ -7,3 +7,7 @@
 /* Countdown timer */
 #counter{ display:inline-block; }
 .fixed-height-150{ height:150px; }
+
+/* Gloabl, but mainly on lat,lng finder */
+.align-left{ text-align:left !important; }
+#latlongmap{ height:400px; }

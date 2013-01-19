@@ -44,7 +44,7 @@
 	
 	</script>
 </head>
-<body>
+<body<?php if(!empty($bodyattr)): ?> <?= $bodyattr; ?><?php endif; ?>>
 	<div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -70,6 +70,7 @@
                   <li><a href="<?php echo Uri::create('tools/geek/word-count'); ?>">Word Count</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/html-entities'); ?>">HTML Entities</a></li>
                   <li><a href="<?php echo Uri::create('tools/geek/unix-timestamp-converter'); ?>">Unix Timestamp Converter</a></li>
+                  <li><a href="<?php echo Uri::create('tools/geek/maps-lat-lng'); ?>">Maps Lat,Lng Tool</a></li>
                 </ul>
               </li>
               <li class="dropdown <?php echo ((!empty($tab) && $tab=='teens') ? ' active' : '') ?>">
