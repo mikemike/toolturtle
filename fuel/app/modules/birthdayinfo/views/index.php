@@ -9,11 +9,11 @@
 <?php echo $val->show_errors(); ?>
 <?php if(!empty($error)): ?><div class="alert alert-error"><?= $error ?></div><?php endif; ?>
 
-<?php echo Form::open(array('class' => 'form-horizontal', 'action' => Uri::current().'#results')); ?>
+<?php echo Form::open(array('class' => 'form-horizontal', 'action' => Uri::current().'#results', 'method' => 'get')); ?>
   <div class="control-group">
     <label class="control-label" for="birthday">Your Birthday</label>
     <div class="controls">
-      <?php echo Form::input('birthday', \Input::Post('birthday'), array('placeholder' => 'Date', 'class' => 'datepicker input-small')); ?>
+      <?php echo Form::input('birthday', \Input::get('birthday'), array('placeholder' => 'Date', 'class' => 'datepicker input-small')); ?>
     </div>
   </div>
   <div class="form-actions">

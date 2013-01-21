@@ -33,7 +33,7 @@ class Controller_Birthdayinfo extends \Controller_Template
 			// process your stuff when validation succeeds
 			$ok_to_proceed = false;
 			// Process the date
-			$birthday = \Input::post('birthday');
+			$birthday = \Input::get('birthday');
 			$birthday_arr = explode('/', $birthday);
 			if(count($birthday_arr) != 3){
 				$data['error'] = 'Sorry, your birthday was entered in the wrong format.';
