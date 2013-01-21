@@ -82,9 +82,46 @@ class Controller_Birthdayinfo extends \Controller_Template
 					'timestamp' => null,
 					'/people/person/date_of_birth' => date('Y-m-d', $birthday_timestamp)
 				);
-				$birthdays = $this->freebase($q);
+				$data['birthdays'] = $this->freebase($q);
+
 				
-				echo '<pre>'.print_r($birthdays, true).'</pre>';
+				$q = array(
+					'type' => '/music/album',
+					'limit' => 1000,
+					'sort' => 'artist',
+					'artist' => null,
+					'name' => null,
+					'guid' => null,
+					'timestamp' => null,
+					'release_date>=' => date('Y-m-d', $birthday_timestamp)
+				);
+				$data['albums'] = $this->freebase($q);
+
+				
+				$q = array(
+					'type' => '/law/invention',
+					'limit' => 1000,
+					'sort' => 'name',
+					'name' => null,
+					'guid' => null,
+					'timestamp' => null,
+					'date_of_invention>=' => date('Y', $birthday_timestamp),
+					'date_of_invention<' => date('Y', ($birthday_timestamp+31536000))
+				);
+				$data['inventions'] = $this->freebase($q);
+
+				
+				$q = array(
+					'type' => '/event/disaster',
+					'limit' => 1000,
+					'sort' => 'name',
+					'name' => null,
+					'guid' => null,
+					'timestamp' => null,
+					'/time/event/start_date>=' => date('Y', $birthday_timestamp),
+					'/time/event/start_date<' => date('Y', ($birthday_timestamp+31536000))
+				);
+				$data['disasters'] = $this->freebase($q);
 			}
 			
 		}
@@ -108,7 +145,6 @@ class Controller_Birthdayinfo extends \Controller_Template
 		$query = 'https://www.googleapis.com/freebase/v1/mqlread?query=['.$query_str.']';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $query);
-		echo 'Called <a href="'.$query.'">'.$query.'</a><br>';
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		//curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -123,4 +159,3 @@ class Controller_Birthdayinfo extends \Controller_Template
 		return $res;
 	}
 }
-
